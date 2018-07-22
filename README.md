@@ -2,4 +2,4 @@
 
 ### Select a language:
 
-[English](/en)
+[English](./en)
