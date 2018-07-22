@@ -1,5 +1,5 @@
 ## iQue Player Hacks Guide
-v0.0.5
+v0.0.6
 ### Select a language:
 
-[English](./en/START.md)
+[English](/en/START.md)
