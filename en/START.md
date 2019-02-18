@@ -1,9 +1,11 @@
-## A complete guide to hacking the iQue Player, from stock to cipher block-jack and recrypt.sys stuff
+# A complete guide to hacking the iQue Player, from stock to cipher block-jack and recrypt.sys stuff
 
-Guide to installing Jbop’s HackIt Patcher on a stock iQue Player
+### Prerequisites
 
 This guide assumes that you are familiar with the Windows command processor (or the equivalent on your OS of choice), have access to either a virtual machine or secondary PC running Windows XP 32 bit, have the iQue@Home drivers installed on Windows XP and are familiar with connecting your iQue Player to Windows XP using a USB cable. In addition, familiarising yourself with transferring files between Windows XP and your main OS will be helpful. Finally, download and install a hex editor such as **HxD** (Windows) and familiarise yourself with its use.
 Note: step 4 of the process requires **Python 3** on your main OS. Please visit [python.org](https://www.python.org/ "Python's homepage") to download and install it, if your main OS does not already have it installed.
+
+### Process breakdown
 
 The process can be broken down into several steps:
 1. Initially achieving code execution on the console through Stuckpixel’s **ique_cbc_attack** program
