@@ -17,7 +17,7 @@
   * In the General tab of the editor, click 'Replace ticket data'
   * Select the .cmd or .cdesc of the game you wish to add and open it
   * Now proceed to step 3
-
+    
   * In the Edit tab, click 'Import ticket.dat' (shortcut Ctrl+I)
   * Navigate to the .dat of the game you wish to add and open it
   * Now proceed to step 3
