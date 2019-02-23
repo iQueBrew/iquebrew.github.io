@@ -16,13 +16,11 @@
   * Create a new ticket (Edit → New ticket, shortcut Ctrl+N)
   * In the General tab of the editor, click 'Replace ticket data'
   * Select the .cmd or .cdesc of the game you wish to add and open it
-
-    Now proceed to step 3
+  * Now proceed to step 3
 
   * In the Edit tab, click 'Import ticket.dat' (shortcut Ctrl+I)
   * Navigate to the .dat of the game you wish to add and open it
-
-    Now proceed to step 3
+  * Now proceed to step 3
 
 3. Come up with a cool CID and fill in the `CID:` box with it
 4. Save the edited hackit.sys (File → Save, shortcut Ctrl+S)
