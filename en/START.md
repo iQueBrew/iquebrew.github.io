@@ -16,13 +16,13 @@ The process can be broken down into several steps:
 This guide will work through each step, one at a time. It is assumed that, before following a step, you have correctly followed each preceding step.
 It is recommended to read the guide through at least once before proceeding.
 
-Step 1: Initial code execution
+#### Step 1: Initial code execution
 
 In this step, we will use Stuckpixel’s **ique_cbc_attack** program to patch
 Dr. Mario (马力欧医生) to achieve code execution.
-Before following this step, please ensure that Dr. Mario has been transferred to your console and has been opened at least once.
-In this step, your save data for Dr. Mario will be overwritten. Follow [this guide](example.com) (which hasn’t been written yet) to back it up if it is important to you.
-Instructions for some parts of this step are specifically intended for Windows 10 64 bit. You may need to change some things for the process to work correctly on your OS of choice.
+* Before following this step, please ensure that Dr. Mario has been transferred to your console and has been opened at least once.
+* In this step, your save data for Dr. Mario will be overwritten. Follow [this guide](example.com) (which hasn’t been written yet) to back it up if it is important to you.
+* Instructions for some parts of this step are specifically intended for Windows 10 64 bit. You may need to change some things for the process to work correctly on your OS of choice.
 
 1. Connect your iQue Player to Windows XP, turn it on and open **ique_diag**. Enter `B` to initialise the connection.
 2. Enter `3 005d1870.rec` to dump Dr. Mario’s encrypted game file to Windows XP.
@@ -49,7 +49,7 @@ successfully injected 1 blocks!
 10. In **ique_diag**, enter `Q` to close the connection to the console while keeping **ique_diag** open.
 11. Turn off your console and disconnect it from your Windows XP PC.
 
-Step 2: Dumping your console’s keys
+#### Step 2: Dumping your console’s keys
 
 1. Turn the console back on (without a USB cable inserted) to boot to the main iQue Menu.
 2. Open Dr. Mario (马力欧医生) from the games list (‘游戏’ on the main menu). The game should boot to a black screen.
@@ -61,26 +61,26 @@ Step 2: Dumping your console’s keys
 8. In **ique_diag** on Windows XP, enter `3 ticket.sys` to dump your console’s ticket file.
 9. Copy **ticket.sys** from the folder containing **ique_diag** on Windows XP to a known location your main OS.
 
-Step 3: Installing Jbop’s HackIt Menu patcher
+#### Step 3: Installing Jbop’s HackIt Menu patcher
 
 There are several ways to determine your console’s firmware version. For the purposes of this guide, it is assumed that you have not made a NAND backup.
 There are exactly two SKSA versions that support USB. Both have the iQue@Home logo displayed in the top left of the main menu, in Chinese (神游在线). If the main menu of your console does not have this logo, it is not compatible with iQue@Home.
 
-Rename hackit_patcher.sta to 005d1870.sta.
-Copy 005d1870.sta to the folder containing ique_diag on Windows XP
-In ique_diag, enter 4 005d1870.sta to write the System Menu patcher to your console.
+1. Rename hackit_patcher.sta to 005d1870.sta.
+2. Copy 005d1870.sta to the folder containing ique_diag on Windows XP
+3. In ique_diag, enter 4 005d1870.sta to write the System Menu patcher to your console.
 
-Step 4: Editing your console’s ticket.sys file
+#### Step 4: Editing your console’s ticket.sys file
 
-On your main OS, open ticket.sys_editor.py (using Python).
-Click File, Open file, then navigate to the ticket.sys file dumped from your console earlier, and click Open.
-As an initial test, choose 塞尔达的传说 from the list on the right. Click the Ticket data tab, then press Ticket ID: to bring up the ticket ID editor. Uncheck the box next to Is trial ticket:, then close the ticket ID editor window.
-Click File, Save as, then navigate to a known directory on your main OS, enter hackit.sys as the filename, then press Save to save the edited file.
-Copy hackit.sys from your main OS to the folder containing ique_diag on Windows XP.
-In ique_diag, enter 4 hackit.sys to write the modified file to your console, then enter Q to close the connection to your console while keeping ique_diag open.
-Turn off your console and disconnect it from your Windows XP PC.
-Turn the console back on (without a USB cable inserted) to boot to the main iQue Menu.
-Open Dr. Mario (马力欧医生) from the games list (‘游戏’ on the main menu). The game should boot to a black screen.
-After a few seconds, press the power button on the console once to return to the iQue Menu. When the main menu loads, enter the games list (‘游戏’ on the main menu), and scroll down until you reach Ocarina of Time (塞尔达传说：时光之笛). Near the right-hand edge of the screen, the small box between the block indicator (114) and the icon displaying whether the game is on the console or PC should be red, indicating that the game is no longer a trial. This demonstrates that the patcher worked and the system menu’s signatures have successfully been patched.
+1. On your main OS, open **ticket.sys_editor.py** (using Python).
+2. Click *File*, *Open file*, then navigate to the **ticket.sys** file dumped from your console earlier, and click *Open*.
+3. As an initial test, choose **塞尔达的传说** from the list on the left. Click the *Ticket data* tab, then press *Ticket ID:* to bring up the ticket ID editor. Uncheck the box next to *Is trial ticket:*, then close the ticket ID editor window.
+4. Click *File*, *Save as*, then navigate to a known directory on your main OS, enter **hackit.sys** as the filename, then press *Save* to save the edited file.
+5. Copy **hackit.sys** from your main OS to the folder containing **ique_diag** on Windows XP.
+6. In **ique_diag**, enter `4 hackit.sys` to write the modified file to your console, then enter `Q` to close the connection to your console while keeping **ique_diag** open.
+7. Turn off your console and disconnect it from your Windows XP PC.
+8. Turn the console back on (without a USB cable inserted) to boot to the main iQue Menu.
+9. Open Dr. Mario (马力欧医生) from the games list (‘游戏’ on the main menu). The game should boot to a black screen.
+10. After a few seconds, press the power button on the console once to return to the iQue Menu. When the main menu loads, enter the games list (‘游戏’ on the main menu), and scroll down until you reach The Legend of Zelda: Ocarina of Time (塞尔达传说：时光之笛). Near the right-hand edge of the screen, the small box between the block indicator (114) and the icon displaying whether the game is on the console or PC should be red, indicating that the game is no longer a trial. This demonstrates that the patcher worked and the system menu’s signatures have successfully been patched.
 
-...anything else I should add?
+At this point, your console has successfully been hacked. You are now free to use **ticket.sys_editor.py** and **iQueCrypt** to add software to your console.
