@@ -30,6 +30,6 @@
 iquecrypt.exe encrypt -app <path to the .z64 of the game here> -key 00000000000000000000000000000000 -iv 00000000000000000000000000000000
 ```
 (replace <path to the .z64 of the game here> with the path to the .z64 of your game of choice)
-7. Rename `[enc]<game filename here>.z64` to <CID from earlier>.app`
+7. Rename `[enc]<game filename here>.z64` to `<CID from earlier>.app`
 8. Copy hackit.sys and `<CID>.app` to Windows XP and write them to your console with iQueDiagExtend
 9. On the console, launch the HackIt Patcher and enjoy your new game!
