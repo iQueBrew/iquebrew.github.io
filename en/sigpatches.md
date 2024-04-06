@@ -19,13 +19,13 @@ The SK IV is 16 bytes long and is located at offset 0x1470 in the bootrom. Its S
 
 ### Contents
 
-[Extracting everything](#Extracting_everything)
+[Extracting everything](#extracting-everything)
 
-[Patching](#Patching)
+[Patching](#patching)
 
-[Rebuilding everything](#Rebuilding_everything)
+[Rebuilding everything](#rebuilding-everything)
 
-[What next?](#What_next)
+[What next?](#what-next)
 
 ### Extracting everything
 
@@ -69,7 +69,7 @@ $ cat sa2-compressed.bin | python3 -c "import zlib;import sys;sys.stdout.buffer.
 ```
 
 The equivalent command in PowerShell:
-```ps
+```powershell
 > gc sa2-compressed.bin -AsByteStream | py -3 -c "import zlib;import sys;sys.stdout.buffer.write(zlib.decompress(sys.stdin.buffer.read(), -15))" > sa2.bin
 ```
 
