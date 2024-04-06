@@ -70,7 +70,7 @@ $ cat sa2-compressed.bin | python3 -c "import zlib;import sys;sys.stdout.buffer.
 
 The equivalent command in PowerShell:
 ```powershell
-> gc sa2-compressed.bin -AsByteStream | py -3 -c "import zlib;import sys;sys.stdout.buffer.write(zlib.decompress(sys.stdin.buffer.read(), -15))" > sa2.bin
+gc sa2-compressed.bin -AsByteStream | py -3 -c "import zlib;import sys;sys.stdout.buffer.write(zlib.decompress(sys.stdin.buffer.read(), -15))" > sa2.bin
 ```
 
 ### Patching
@@ -135,7 +135,7 @@ You can use iQueTool to update the SKSA in a NAND dump, and then write it to you
 
 Here's the command to generate a new NAND and spare:
 ```bash
-iquetool nand -uk modified.sksa -gs spare.bin -o nand.bin old-nand.bin
+$ iquetool nand -uk modified.sksa -gs spare.bin -o nand.bin old-nand.bin
 ```
 
 Enjoy!
