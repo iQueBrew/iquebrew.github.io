@@ -4,6 +4,7 @@
 
 - Familiarity with commandline tools
 - A hex editor (I recommend HxD on Windows and also HxD on Linux via wine)
+- Some way to determine SHA-1 hashes (HxD can do this)
 - iQueCrypt and familiarity with its usage, or another way to encrypt/decrypt data with AES-CBC-128; pycryptodomex works for this
 - iQueTool and familiarity with its usage, or another way to build NAND images with arbitrary SKSAs
 - A copy of SKSA 1106 (other SKSAs will work, but you'll have to find the SA2 patch locations yourself)
@@ -70,7 +71,7 @@ $ cat sa2-compressed.bin | python3 -c "import zlib;import sys;sys.stdout.buffer.
 
 The equivalent command in PowerShell:
 ```powershell
-gc sa2-compressed.bin -AsByteStream | py -3 -c "import zlib;import sys;sys.stdout.buffer.write(zlib.decompress(sys.stdin.buffer.read(), -15))" > sa2.bin
+> gc sa2-compressed.bin -AsByteStream | py -3 -c "import zlib;import sys;sys.stdout.buffer.write(zlib.decompress(sys.stdin.buffer.read(), -15))" > sa2.bin
 ```
 
 ### Patching
@@ -135,7 +136,7 @@ You can use iQueTool to update the SKSA in a NAND dump, and then write it to you
 
 Here's the command to generate a new NAND and spare:
 ```bash
-$ iquetool nand -uk modified.sksa -gs spare.bin -o nand.bin old-nand.bin
+iquetool nand -uk modified.sksa -gs spare.bin -o nand.bin old-nand.bin
 ```
 
 Enjoy!
